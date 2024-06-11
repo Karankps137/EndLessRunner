@@ -6,9 +6,9 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject[] RoadPieces = new GameObject[2];
-    public float RoadLength = 100f; //length of roads
+    public float RoadLength = 100f; 
 
-    public float RoadSpeed = 5f; //speed to scroll roads at
+    public float RoadSpeed = 5f;
     void Update()
     {
         foreach (GameObject road in RoadPieces)
