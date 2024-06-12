@@ -108,11 +108,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8435830846882770612, guid: 84407f2596ff3d246b689e24c94825ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3254905020649739185, guid: a61f46b2e7c661c43a46298a129ba4b2,
+        type: 3}
+    - target: {fileID: -5833402419056262000, guid: 84407f2596ff3d246b689e24c94825ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3254905020649739185, guid: a61f46b2e7c661c43a46298a129ba4b2,
+        type: 3}
+    - target: {fileID: -878380423640452969, guid: 84407f2596ff3d246b689e24c94825ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3254905020649739185, guid: a61f46b2e7c661c43a46298a129ba4b2,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: 84407f2596ff3d246b689e24c94825ea,
         type: 3}
       propertyPath: m_Name
       value: car_2
       objectReference: {fileID: 0}
+    - target: {fileID: 6553274719662281544, guid: 84407f2596ff3d246b689e24c94825ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3254905020649739185, guid: a61f46b2e7c661c43a46298a129ba4b2,
+        type: 3}
+    - target: {fileID: 7449117260151601537, guid: 84407f2596ff3d246b689e24c94825ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3254905020649739185, guid: a61f46b2e7c661c43a46298a129ba4b2,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84407f2596ff3d246b689e24c94825ea, type: 3}
 --- !u!4 &8269616787211085819 stripped
