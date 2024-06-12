@@ -1,1 +1,5 @@
-d:\Software\Unity\EndLessRunner\Temp\UnityLockfile
+Library\*
+Packages\* 
+Logs\*
+obj\*
+Temp\*
