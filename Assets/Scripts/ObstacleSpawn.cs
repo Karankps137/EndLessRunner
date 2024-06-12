@@ -36,7 +36,7 @@ public class ObstacleSpawn : MonoBehaviour
             {
                 for(int i=0;i<3;i++)
                 {
-                    GameObject obs= Instantiate(Obstacles[i],temp.transform.GetChild(Random.Range(0,2)).transform);
+                    GameObject obs= Instantiate(Obstacles[i],temp.transform.GetChild(Random.Range(0,3)).transform);
                     obs.transform.SetParent(road.transform.Find("car parent").transform);
                 }
             }
