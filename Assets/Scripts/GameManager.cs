@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
             if (newRoadPos.z < -RoadLength / 2)
             {
                 newRoadPos.z += RoadLength;
+                ObstacleSpawn.instance.SpawnObstacle(road);
             }
             road.transform.position = newRoadPos;
         }

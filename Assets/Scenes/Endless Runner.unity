@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28518692, g: 0.3712589, b: 0.4933192, a: 1}
+  m_IndirectSpecularColor: {r: 0.28518695, g: 0.3712587, b: 0.49331808, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2162,6 +2162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1427251099}
+  - component: {fileID: 1427251100}
   m_Layer: 0
   m_Name: Roads
   m_TagString: Untagged
@@ -2190,6 +2191,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1427251100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427251098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76c24fe93cbba840abddabddb677490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prevroad: {fileID: 0}
+  Obstacles:
+  - {fileID: 8143325215063753223, guid: 8dde1486804bf1b46b757e6f7f79734e, type: 3}
+  - {fileID: 2249109700545200081, guid: 549452cf1b4ff544b988f174be287c9d, type: 3}
+  - {fileID: 4200507120617650107, guid: 393bad936ddea6e4cb28705d053395ec, type: 3}
 --- !u!1 &1458322688
 GameObject:
   m_ObjectHideFlags: 0
