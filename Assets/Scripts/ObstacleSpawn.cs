@@ -7,10 +7,12 @@ public class ObstacleSpawn : MonoBehaviour
     public static ObstacleSpawn instance;
     public GameObject prevroad;
     public GameObject[] Obstacles;
+    public int ObstacleLength=3;
     // Start is called before the first frame update
     void Start()
     {
         instance=this;
+        ObstacleLength=Obstacles.Length;
     }
 
     // Update is called once per frame
@@ -34,21 +36,29 @@ public class ObstacleSpawn : MonoBehaviour
         {
             if(temp.name=="Obstacle")
             {
-                for(int i=0;i<3;i++)
+                int[] c = Choose(ObstacleLength,0,ObstacleLength);
+                for(int i=0;i<ObstacleLength;i++)
                 {
-                    int c=Random.Range(0,3);
-                    GameObject obs= Instantiate(Obstacles[i],temp.transform.GetChild(c).transform);
-                    foreach(Transform check in road.transform.Find("car parent").transform)
-                    {
-                        if(check.transform.position==obs.transform.position)
-                        {
-                            check.transform.position = temp.transform.GetChild(2-c).transform.position;
-                        }
-                    }
+                    GameObject obs= Instantiate(Obstacles[i],temp.transform.GetChild(c[i]).transform);
                     obs.transform.SetParent(road.transform.Find("car parent").transform);
                 }
             }
         }
         
     }
+    public static int[] Choose(int k, int min, int max)
+{
+    var items = new List<int>();
+    for(var i=min; i<max; i++) items.Add(i);
+ 
+    var choices = new int[k];
+    for (var i = 0; i < k; i++)
+    {
+        var index = UnityEngine.Random.Range(0, items.Count);
+        choices[i] = items[index];
+        items.RemoveAt(index);
+    }
+    return choices;
+}
+    
 }
