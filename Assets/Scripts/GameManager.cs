@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class GameManager : MonoBehaviour
 
     public float RoadSpeed = 5f;
     public int Health=10;
+    public int Score=0;
     public static GameManager instance;
+    public GameObject HealthText;
+    public GameObject ScoreText;
     
     void Start()
     {
