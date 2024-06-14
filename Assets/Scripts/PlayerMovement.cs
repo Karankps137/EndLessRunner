@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Move player
         //this.gameObject.transform.Translate(new Vector3(0, 0, speed));
