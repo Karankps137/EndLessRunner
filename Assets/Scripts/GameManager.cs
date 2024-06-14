@@ -9,6 +9,13 @@ public class GameManager : MonoBehaviour
     public float RoadLength = 100f; 
 
     public float RoadSpeed = 5f;
+    public int Health=10;
+    public static GameManager instance;
+    
+    void Start()
+    {
+        instance=this;
+    }
     void Update()
     {
         foreach (GameObject road in RoadPieces)

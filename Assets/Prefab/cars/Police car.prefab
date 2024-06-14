@@ -31,6 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8439551005262594868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757324292894670145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.19088, y: 2.0636265, z: 1.6747732}
+  m_Center: {x: -0.06290282, y: -0.028592348, z: -0.8062975}
 --- !u!1001 &8451336590750351376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: car_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84407f2596ff3d246b689e24c94825ea,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6553274719662281544, guid: 84407f2596ff3d246b689e24c94825ea,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -145,6 +163,12 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84407f2596ff3d246b689e24c94825ea, type: 3}
+--- !u!1 &8757324292894670145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 84407f2596ff3d246b689e24c94825ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 8451336590750351376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8269616787211085819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84407f2596ff3d246b689e24c94825ea,

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 0.01f;
+    public float speed = 0.05f;
     public GameObject PlayerChildAnimation;
     public Transform PlayerLeft;
     public Transform PlayerRight;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //Move player
         //this.gameObject.transform.Translate(new Vector3(0, 0, speed));
@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
             if (Position.Left != CheckPlayerPosition(this.transform))
             //if(this.transform.position.x!=-2.5f)
             {
-                this.transform.position= Vector3.Lerp(this.transform.position, new Vector3(this.transform.position.x - 0.5f, this.transform.position.y, this.transform.position.z), 0.05f);
+                this.transform.position= Vector3.Lerp(this.transform.position, new Vector3(this.transform.position.x - 2.5f, this.transform.position.y, this.transform.position.z), speed);
             }
         }
         if (Input.GetKey(KeyCode.D))
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             if (Position.Right != CheckPlayerPosition(this.transform))
                 //if (this.transform.position.x!=2.5f)
             {
-                this.transform.position= Vector3.Lerp(this.transform.position, new Vector3(this.transform.position.x + 0.5f, this.transform.position.y, this.transform.position.z), 0.05f);
+                this.transform.position= Vector3.Lerp(this.transform.position, new Vector3(this.transform.position.x + 2.5f, this.transform.position.y, this.transform.position.z), speed);
             }
         }
 
