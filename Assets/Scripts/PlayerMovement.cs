@@ -9,10 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public Transform PlayerLeft;
     public Transform PlayerRight;
     public Transform PlayerCenter;
+
+    public static PlayerMovement instance;
+    public bool IsGameOver=false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance=this;
     }
     public enum Position
         {
@@ -26,17 +29,17 @@ public class PlayerMovement : MonoBehaviour
     {
         //Move player
         //this.gameObject.transform.Translate(new Vector3(0, 0, speed));
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !IsGameOver)
         {
             //Play Jump Animation
             PlayerChildAnimation.GetComponent<Animator>().SetTrigger("Jump");
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C)&& !IsGameOver)
         {
             //Play Crouch Animation
             PlayerChildAnimation.GetComponent<Animator>().SetTrigger("Crouch");
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !IsGameOver)
         {
             //Move player to left
             if (Position.Left != CheckPlayerPosition(this.transform))
@@ -45,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
                 this.transform.position= Vector3.Lerp(this.transform.position, new Vector3(this.transform.position.x - 2.5f, this.transform.position.y, this.transform.position.z), speed);
             }
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !IsGameOver)
         {
             //Move player to right
             if (Position.Right != CheckPlayerPosition(this.transform))

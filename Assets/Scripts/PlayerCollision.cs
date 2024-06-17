@@ -8,7 +8,9 @@ public class PlayerCollision : MonoBehaviour
     public object GameoverText { get; private set; }
 
     // Start is called before the first frame update
-    void Start() => GameManager.instance.GameoverText.SetActive(false);
+    void Start(){
+       
+    } 
 
     // Update is called once per frame
     void Update()
@@ -20,25 +22,33 @@ public class PlayerCollision : MonoBehaviour
         if(other.gameObject.tag=="Obstacle")
         {
             //add health condition above 1
-            GameManager.instance.Health--;
-            GameManager.instance.HealthText.GetComponent<Text>().text=GameManager.instance.Health.ToString();
-
+            if(GameManager.instance.Health>=1)
+            {
+                GameManager.instance.Health--;
+                GameManager.instance.HealthText.GetComponent<Text>().text=GameManager.instance.Health.ToString();
+            }
             //check health 0, set text to gameover
+            else if(GameManager.instance.Health==0)
+            {
+                GameManager.instance.GameoverText.SetActive(true);
+                Debug.Log("Gameover");
+                GameManager.instance.RoadSpeed = 0;
+                PlayerMovement.instance.IsGameOver=true;
+                PlayerMovement.instance.PlayerChildAnimation.GetComponent<Animator>().SetTrigger("Game Over");
+            }
+
         }
         if(other.gameObject.tag=="Coin")
         {
             GameManager.instance.Score++;
             GameManager.instance.ScoreText.GetComponent<Text>().text=GameManager.instance.Score.ToString();
             if(GameManager.instance.Score%10==0)
-            GameManager.instance.HealthText.GetComponent<Text>().text=(++GameManager.instance.Health).ToString();
+                GameManager.instance.HealthText.GetComponent<Text>().text=(++GameManager.instance.Health).ToString();
             Destroy(other.gameObject);
         }
         if (GameManager.instance.Health == 0)
         {
-            GameManager.instance.GameoverText.SetActive(true);
-            Debug.Log("Gameover");
-            GameManager.instance.RoadSpeed = 0;
-
+          
         }
 
 
