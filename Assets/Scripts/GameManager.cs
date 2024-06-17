@@ -15,10 +15,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject HealthText;
     public GameObject ScoreText;
-    
+    public GameObject GameoverText;
+
     void Start()
     {
         instance=this;
+        GameoverText.SetActive(false);
     }
     void Update()
     {
