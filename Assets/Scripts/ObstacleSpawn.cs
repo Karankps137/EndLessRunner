@@ -36,7 +36,7 @@ public class ObstacleSpawn : MonoBehaviour
         {
             if(temp.name=="Obstacle")
             {
-                int[] c = Choose(ObstacleLength,0,ObstacleLength);
+                int[] c = Choose(ObstacleLength, 0, ObstacleLength);
                 for(int i=0;i<ObstacleLength;i++)
                 {
                     GameObject obs= Instantiate(Obstacles[i],temp.transform.GetChild(c[i]).transform);

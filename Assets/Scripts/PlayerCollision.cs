@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
+    private const int V = 0;
+
     public object GameoverText { get; private set; }
 
     // Start is called before the first frame update
@@ -15,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
     void OnTriggerEnter(Collider other)
     {
@@ -35,6 +37,7 @@ public class PlayerCollision : MonoBehaviour
                 GameManager.instance.RoadSpeed = 0;
                 PlayerMovement.instance.IsGameOver=true;
                 PlayerMovement.instance.PlayerChildAnimation.GetComponent<Animator>().SetTrigger("Game Over");
+                Invoke(nameof(StopGame), 2.0f);
             }
 
         }
@@ -46,11 +49,11 @@ public class PlayerCollision : MonoBehaviour
                 GameManager.instance.HealthText.GetComponent<Text>().text=(++GameManager.instance.Health).ToString();
             Destroy(other.gameObject);
         }
-        if (GameManager.instance.Health == 0)
-        {
-          
-        }
 
+    }
 
+    void StopGame()
+    {
+        Time.timeScale = V;
     }
 }
