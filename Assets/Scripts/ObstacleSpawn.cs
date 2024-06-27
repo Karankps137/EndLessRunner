@@ -6,8 +6,11 @@ public class ObstacleSpawn : MonoBehaviour
 {
     public static ObstacleSpawn instance;
     public GameObject prevroad;
+    public GameObject expl;
     public GameObject[] Obstacles;
     public int ObstacleLength=3;
+    internal readonly object obs;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class ObstacleSpawn : MonoBehaviour
                 {
                     GameObject obs= Instantiate(Obstacles[i],temp.transform.GetChild(c[i]).transform);
                     obs.transform.SetParent(road.transform.Find("car parent").transform);
+                  
                 }
             }
         }

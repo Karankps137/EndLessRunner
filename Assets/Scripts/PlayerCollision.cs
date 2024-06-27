@@ -9,6 +9,7 @@ public class PlayerCollision : MonoBehaviour
 
     public object GameoverText { get; private set; }
 
+
     // Start is called before the first frame update
     void Start(){
        
@@ -27,7 +28,7 @@ public class PlayerCollision : MonoBehaviour
             if(GameManager.instance.Health>=1)
             {
                 GameManager.instance.Health--;
-                GameManager.instance.HealthText.GetComponent<Text>().text=GameManager.instance.Health.ToString();
+                GameManager.instance.HealthText.GetComponent<Text>().text = GameManager.instance.Health.ToString();
             }
             //check health 0, set text to gameover
             else if(GameManager.instance.Health==0)
