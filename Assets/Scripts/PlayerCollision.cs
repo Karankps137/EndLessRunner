@@ -40,6 +40,7 @@ public class PlayerCollision : MonoBehaviour
                 PlayerMovement.instance.PlayerChildAnimation.GetComponent<Animator>().SetTrigger("Game Over");
                 Invoke(nameof(StopGame), 2.0f);
             }
+            Destroy(other.gameObject);
 
         }
         if(other.gameObject.tag=="Coin")
@@ -48,7 +49,11 @@ public class PlayerCollision : MonoBehaviour
             GameManager.instance.ScoreText.GetComponent<Text>().text=GameManager.instance.Score.ToString();
             if(GameManager.instance.Score%10==0)
                 GameManager.instance.HealthText.GetComponent<Text>().text=(++GameManager.instance.Health).ToString();
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
+        }
+        if(other.gameObject.tag=="Explosion")
+        {
+           other.gameObject.GetComponent<ParticleSystem>().Play();
         }
 
     }

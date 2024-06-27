@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.48015925, g: 0.42366815, b: 0.35717484, a: 1}
+  m_IndirectSpecularColor: {r: 0.4801592, g: 0.42366818, b: 0.35717487, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -344,6 +344,8 @@ MonoBehaviour:
   PlayerRight: {fileID: 1584191291}
   PlayerCenter: {fileID: 1872638152}
   IsGameOver: 0
+  detectSwipeAfterRelease: 0
+  SWIPE_THRESHOLD: 20
 --- !u!1 &170171480
 GameObject:
   m_ObjectHideFlags: 0
